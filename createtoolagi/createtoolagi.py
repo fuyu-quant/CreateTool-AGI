@@ -75,12 +75,13 @@ class CreateToolAGI():
 
 
         create_prompt = """
-        Create a python class that can execute {input} with a single string as input.
-        Output should be code only.
-        The following code was created with the input "multiply two numbers". Please create it like this code.
-        Do not enclose the output in ``python ``` or the like.
-        from langchain.tools import BaseTool must be written.
-        Class must inherit from BaseTool.
+        Please create your code in compliance with all of the following conditions.
+        ・Create a python class that can execute {input} with a single string as input.
+        ・Output should be code only.
+        ・The following code was created with the input "multiply two numbers". Please create it like this code.
+        ・Do not enclose the output in ``python ``` or the like.
+        ・from langchain.tools import BaseTool must be written.
+        ・Class must inherit from BaseTool.
         
         ------------------
         from langchain.tools import BaseTool
