@@ -79,9 +79,12 @@ class CreateToolAGI():
         Output should be code only.
         The following code was created with the input "multiply two numbers". Please create it like this code.
         Do not enclose the output in ``python ``` or the like.
+        from langchain.tools import BaseTool must be written.
         Class must inherit from BaseTool.
         
         ------------------
+        from langchain.tools import BaseTool
+
         class MultiplicationTool(BaseTool):
             name = "MultiplicationTool"
             description = "used for multiplication. The input is two numbers. For example, if you want to multiply 1 by 2, the input is '1,2'."
