@@ -17,7 +17,7 @@
 
 　CreateTool-AGI creates new Tools each time a new question is entered, allowing it to improve its capabilities autonomously.
 
-
+![CreateToolAGI](./images/CreateToolAGI.gif)
 
 ## How It Works
 This script is executed in the following order:
