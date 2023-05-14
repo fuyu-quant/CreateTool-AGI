@@ -68,7 +68,7 @@ class CreateToolAGI():
         return responese
 
 
-    def _tool_make(self, input_prompt_, folder_path_):
+    def _tool_make(self, input_prompt_, folder_path_, refer_code_ = None):
         print("> Create a tool.")
 
         tool_llm = OpenAI(temperature=0, model_name = self.model_name)
@@ -82,6 +82,8 @@ class CreateToolAGI():
         ・Do not enclose the output in ``python ``` or the like.
         ・from langchain.tools import BaseTool must be written.
         ・Class must inherit from BaseTool.
+        ・If you have previously created code that failed to execute, please refer to it as well.
+        ・Here is the code I created previously: {code}
         
         ------------------
         from langchain.tools import BaseTool
@@ -102,7 +104,7 @@ class CreateToolAGI():
                 "Use the tool asynchronously."
                 raise NotImplementedError("MultiplicationTool does not support async")
         ------------------
-        """.format(input = input_prompt_)
+        """.format(input = input_prompt_, code = refer_code_)
 
         code = tool_llm(create_prompt)
 
@@ -172,9 +174,9 @@ class CreateToolAGI():
 
                     break
                 except Exception as e:
-                    print(f"Error occurred: {e}" + '\n')
+                    print('\033[32m' + f"Error occurred: {e}" + '\n' + '\033[0m')
                     
         if count >= 5:
-            print("Reached the maximum number of tries.")
+            print('\033[32m' + "Reached the maximum number of tries." + '\033[0m')
         
         return 
