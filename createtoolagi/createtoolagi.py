@@ -152,12 +152,13 @@ class CreateToolAGI():
             self._execute(input_prompt_, tools_)
 
         elif output == "No.":
+            tools_ = []
             # Repeat until successful.
             count = 0
             refer_tool_code = None
             while count < 5:
                 count += 1
-                print(f'try:{count}')
+                print(f'Try:{count}')
                 try:
                     new_tool_name, new_tool_code = self._tool_make(generalized_task, folder_path_, refer_tool_code)
                     
