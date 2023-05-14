@@ -1,5 +1,13 @@
 # CreateTool-AGI
 
+-[What is CreateTool-AGI?](#what-is-createtool-agi)
+-[How It Works](#how-it-works)
+-[How to Use](#how-to-use)
+-[Supported Models](#supported-models)
+-[Contributor](#contributor)
+-[Backstory](#backstory)
+
+
 
 ## What is CreateTool-AGI?
 　This Python script is designed to enhance the capabilities of the Large Language Model (LLM) by utilizing LangChain's Tools feature: CreateTool-AGI automatically generates Tools for each input question and uses them to answer the question. This feature allows users to solve problems that are difficult to solve with LLM alone, but can be written in a program.
@@ -40,12 +48,47 @@ pip install openai==0.27.4
 ```
 from createtoolagi import CreateToolAGI
 
-input = 'What is the sum of the prime numbers from 1 to 100000?'
+input = 'What is the sum of the prime numbers from 1 to 10000?'
 tools = []
 ctagi = CreateToolAGI()
 
 ctagi.run(input, tools)
 ```
+output
+```
+> Generalize the input task.
+Generalized Task：What is the sum of the prime numbers from A to B?
+
+> Determine if you should make a tool.
+I must create the tool before executing.
+
+try:1
+> Create a tool.
+Completed!
+Created tool name：PrimeSumTool
+
+
+
+> Entering new AgentExecutor chain...
+I need to find the sum of prime numbers between 1 and 100000.
+Action: PrimeSumTool
+Action Input: 1,100000
+Observation: 454396537
+Thought:I now know the final answer.
+Final Answer: 454396537
+
+> Finished chain.
+```
 
 ## Supported Models
-Currently, the recommended model is GPT-4; GPT-3.5-turbo often does not run well.
+Currently, the recommended model is GPT-4; GPT-3.5-turbo often does not run well
+
+
+## Contributor
+　This experimental open-sorce is supported by [@t-ymbys](https://github.com/t-ymbys) and [@cn47](https://github.com/cn47). Thank you very much.
+
+
+## Backstory
+　This idea is based on [langchain-tools](https://github.com/fuyu-quant/langchain-tools), which was created in an attempt to make LLM learn LightGBM.
+
+
