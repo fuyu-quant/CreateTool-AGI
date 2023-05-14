@@ -176,7 +176,7 @@ class CreateToolAGI():
                 except Exception as e:
                     print('\033[32m' + f"Error occurred: {e}" + '\n' + '\033[0m')
                     
-        if count >= 5:
-            print('\033[32m' + "Reached the maximum number of tries." + '\033[0m')
+            if count >= 5:
+                print('\033[32m' + "Reached the maximum number of tries." + '\033[0m')
         
         return 
