@@ -20,6 +20,8 @@ This script is executed in the following order:
 
 
 
+
+
 ## How to Use
 To use the script, you will need to follow these steps:
 
@@ -46,3 +48,4 @@ ctagi.run(input, tools)
 ```
 
 ## Supported Models
+Currently, the recommended model is GPT-4; GPT-3.5-turbo often does not run well.
