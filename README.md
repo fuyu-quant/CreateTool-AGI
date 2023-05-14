@@ -1,11 +1,12 @@
 # CreateTool-AGI
 
--[What is CreateTool-AGI?](#what-is-createtool-agi)
--[How It Works](#how-it-works)
--[How to Use](#how-to-use)
--[Supported Models](#supported-models)
--[Contributor](#contributor)
--[Backstory](#backstory)
+
+- [What is CreateTool-AGI?](#what-is-createtool-agi)
+- [How It Works](#how-it-works)
+- [How to Use](#how-to-use)
+- [Supported Models](#supported-models)
+- [Contributor](#contributor)
+- [Backstory](#backstory)
 
 
 
