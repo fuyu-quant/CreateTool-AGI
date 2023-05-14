@@ -86,10 +86,10 @@ Currently, the recommended model is GPT-4; GPT-3.5-turbo often does not run well
 
 
 ## Contributor
-　This experimental open-sorce is supported by [@t-ymbys](https://github.com/t-ymbys) and [@cn47](https://github.com/cn47). Thank you very much.
+This experimental open-sorce is supported by [@t-ymbys](https://github.com/t-ymbys) and [@cn47](https://github.com/cn47). Thank you very much.
 
 
 ## Backstory
-　This idea is based on [langchain-tools](https://github.com/fuyu-quant/langchain-tools), which was created in an attempt to make LLM learn LightGBM.
+This idea is based on [langchain-tools](https://github.com/fuyu-quant/langchain-tools), which was created in an attempt to make LLM learn LightGBM.
 
 
