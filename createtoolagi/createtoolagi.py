@@ -150,14 +150,31 @@ class CreateToolAGI():
             self._execute(input_prompt_, tools_)
 
         elif output == "No.":
-            new_tool_name, new_tool_code = self._tool_make(generalized_task, folder_path_)
-
-            new_tool_code = new_tool_code + '\n' + f'new_tool = {new_tool_name}()'
-
-            exec(new_tool_code, globals())
-          
-            tools_.append(new_tool)
+            # Repeat until successful.
+            count = 0
+            refer_tool_code = None
+            while count < 5:
+                count += 1
+                print(f'try:{count}')
+                try:
+                    new_tool_name, new_tool_code = self._tool_make(generalized_task, folder_path_, refer_tool_code)
+                    
+                    # If the execution fails, it is referenced in the next loop.
+                    refer_tool_code = new_tool_code
+                    
+                    new_tool_code = new_tool_code + '\n' + f'new_tool = {new_tool_name}()'
+                    
+                    exec(new_tool_code, globals())
+                    
+                    tools_.append(new_tool)
             
-            self._execute(input_prompt_, tools_)
+                    self._execute(input_prompt_, tools_)
+
+                    break
+                except Exception as e:
+                    print(f"Error occurred: {e}" + '\n')
+                    
+        if count >= 5:
+            print("Reached the maximum number of tries.")
         
         return 
