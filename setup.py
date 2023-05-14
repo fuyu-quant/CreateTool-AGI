@@ -1,7 +1,6 @@
 from setuptools import setup, find_packages
 
 
-
 setup(
     name='createtoolagi',
     version='0.0.4',

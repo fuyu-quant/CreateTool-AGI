@@ -5,7 +5,6 @@ from langchain.agents import initialize_agent
 import warnings
 warnings.filterwarnings('ignore')
 
-
 class CreateToolAGI():
     def __init__(
         self,

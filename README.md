@@ -18,7 +18,7 @@ This script is executed in the following order:
 3. Creation of Tools.
 4. Output answers to questions using the created Tools.
 
-
+![createtoolagi](./images/createtoolagi.png)
 
 
 
