@@ -11,9 +11,7 @@
 
 
 ## What is CreateTool-AGI?
-　This Python script is designed to enhance the capabilities of the Large Language Model (LLM) by utilizing LangChain's Tools feature: CreateTool-AGI automatically generates Tools for each input question and uses them to answer the question. This feature allows users to solve problems that are difficult to solve with LLM alone, but can be written in a program.
-　Another important feature of this system is that it can output the Python scripts used to derive the answers, so that the correctness of the logic can be verified.
-　In addition, once created, the Python script is immediately available as a Tool and can be used to solve problems with similar inputs.
+　This Python script is designed to enhance the capabilities of the Large Language Model (LLM) by utilizing LangChain's Tools feature: CreateTool-AGI automatically generates Tools for each input question and uses them to answer the question. This feature allows users to solve problems that are difficult to solve with LLM alone, but can be written in a program. Another important feature of this system is that it can output the Python scripts used to derive the answers, so that the correctness of the logic can be verified. In addition, once created, the Python script is immediately available as a Tool and can be used to solve problems with similar inputs.
 
 　CreateTool-AGI creates new Tools each time a new question is entered, allowing it to improve its capabilities autonomously.
 
