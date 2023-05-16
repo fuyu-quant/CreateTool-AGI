@@ -30,20 +30,27 @@ This script is executed in the following order:
 
 
 ## How to Use
+Use the link below to try it out immediately on Google colab.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fuyu-quant/CreateTool-AGI/blob/main/examples/createtoolagi.ipynb)
+
 To use the script, you will need to follow these steps:
 
 1. Get [OpenAI's API key](https://platform.openai.com/account/api-keys)
 
 2. Pip install with the following command
+
 ```
 pip install git+https://github.com/fuyu-quant/CreateTool-AGI.git
 ```
-3. Install required libraries
+    
+3.  Install required libraries
+
 ```
 pip install langchain==0.0.167
 pip install openai==0.27.4
 ```
-4. You can execute the program as follows．Check [this notebook](https://github.com/fuyu-quant/CreateTool-AGI/blob/main/examples/createtoolagi.ipynb) for detailed examples.
+4. You can execute the program as follows．
 ```
 from createtoolagi import CreateToolAGI
 
