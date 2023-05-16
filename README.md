@@ -86,6 +86,8 @@ Final Answer: 454396537
 > Finished chain.
 ```
 
+While we were able to confirm that the above run would also yield an answer on GPT-4, we believe that CreateToolAGI has an advantage because it can handle any numerical input.
+
 ## Supported Models
 Currently, the recommended model is GPT-4; GPT-3.5-turbo often does not run well
 
