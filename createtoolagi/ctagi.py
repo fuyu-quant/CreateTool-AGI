@@ -32,7 +32,7 @@ class CTAGI():
         self.qdrant = QdrantClient(path='./tools')
         self.qdrant.create_collection(collection_name ="tool_store", vectors_config=models.VectorParams(size=1536, distance=models.Distance.COSINE))
 
-        self.planner = Planner(base_model = self.base_name)
+        self.planner = Planner(base_model = self.base_model)
         self.searcher = Searcher(embedding_model = self.embegging_model, qdrant = self.qdrant)
         self.decider = Decider(base_model = self.base_model)
         self.creator = Creator(create_model = self.create_model)
