@@ -27,7 +27,7 @@ class CTAGI():
 
         self.input = input
 
-        self.qdrant = QdrantClient(path='../tools')
+        self.qdrant = QdrantClient(path='./tools')
 
         #self.planner = Planner(model = self.model_name, input = self.input)
         self.searcher = Searcher(embedding_model = self.embegging_model, qdrant = self.qdrant)
