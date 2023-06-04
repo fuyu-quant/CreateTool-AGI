@@ -16,8 +16,7 @@ class Creator():
         for i in range(len(search_result)):
             disc = search_result[i].payload['discription']
             code = search_result[i].payload['code']
-            
-        related_tools += 'discription:' + '\n' + disc +'\n' + 'code:' +'\n' + code + '\n' + '------------------' + '\n'
+            related_tools += 'discription:' + '\n' + disc +'\n' + 'code:' +'\n' + code + '\n' + '------------------' + '\n'
 
 
 
@@ -38,6 +37,8 @@ class Creator():
             created_tool_code_ = created_tool_code, 
             related_tools_ = related_tools
             )
+
+        print(create_prompt)
 
         code = self.create_model(create_prompt)
 
