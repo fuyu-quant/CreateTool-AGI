@@ -5,7 +5,7 @@ import re
 class Creator():
     def __init__(
         self,
-        model,
+        create_model,
         ):
         self.create_model = create_model
 

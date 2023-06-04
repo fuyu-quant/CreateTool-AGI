@@ -17,10 +17,10 @@ class CTAGI():
         embegging_model_name,
         ):
         self.base_model_name = base_model_name
-        self.base_model = OpenAI(temperature=0,model_name = self.base_model_name)
+        self.base_model = OpenAI(temperature=0, model_name = self.base_model_name)
 
         self.create_model_name = create_model_name
-        self.create_model = OpenAI(temperature=0,model_name = self.create_model_name)
+        self.create_model = OpenAI(temperature=0, model_name = self.create_model_name)
 
         self.embegging_model_name = embegging_model_name
         self.embegging_model = OpenAIEmbeddings(model = self.embegging_model_name)
