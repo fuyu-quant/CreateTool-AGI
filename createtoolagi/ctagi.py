@@ -38,6 +38,8 @@ class CTAGI():
         self.creator = Creator(create_model = self.create_model)
         self.executor = Executor(base_model = self.base_model)
 
+
+
     def run(self, input):
         input = self.planner.run(input)
 

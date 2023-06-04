@@ -25,6 +25,8 @@ class Searcher():
             query_vector = self.embedding_model.embed_query(query),
             limit=5
             )
+
+        print('\033[32m' + f'Search results：\n{result}\n' + '\033[0m')
             
         return result
 
