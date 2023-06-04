@@ -10,6 +10,7 @@ class Executor():
         self.base_model = base_model
 
     def run(self, input, search_result):
+        print("> Execute the task.")
 
         tools = []
 
@@ -34,6 +35,7 @@ class Executor():
         return
 
     def run_with_create_tool(self, input, tool_code):
+        print("> Execute the task with the tool you created.")
 
         tools = []
 

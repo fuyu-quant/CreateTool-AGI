@@ -9,6 +9,7 @@ class Decider():
         self.base_model = base_model
 
     def run(self, input, search_result):
+        print("> Decide if the task is executable.")
         
         executable_tasks = ''
         

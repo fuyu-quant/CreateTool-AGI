@@ -16,6 +16,8 @@ class Searcher():
         self.qdrant = qdrant
 
     def run(self, input):
+        print("> Search tools.")
+
         query = f"Helpful tools to do '{input}'"
 
         result = self.qdrant.search(
@@ -27,6 +29,7 @@ class Searcher():
         return result
 
     def save(self, tool_code):
+        print("> Save a tool.")
 
         # Check the number of data included
         count = self.qdrant.count(collection_name = "tool_store", exact=True)
