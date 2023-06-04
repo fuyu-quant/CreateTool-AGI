@@ -32,7 +32,7 @@ class CTAGI():
         #self.planner = Planner(model = self.model_name, input = self.input)
         self.searcher = Searcher(embedding_model = self.embegging_model, qdrant = self.qdrant)
         self.decider = Decider(base_model = self.base_model)
-        self.creater = Creater(create_model = self.create_model)
+        self.creator = Creator(create_model = self.create_model)
         self.executor = Executor(base_model = self.base_model)
 
     def run(self, input):
