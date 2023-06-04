@@ -16,8 +16,7 @@ class Decider():
         for i in range(len(search_result)):
             disc = search_result[i].payload['discription']
             code = search_result[i].payload['code']
-            
-        executable_tasks += 'discription:' + '\n' + disc +'\n' + 'code:' +'\n' + code + '\n' + '------------------' + '\n'
+            executable_tasks += 'discription:' + '\n' + disc +'\n' + 'code:' +'\n' + code + '\n' + '------------------' + '\n'
 
         prompt = """
         You are the agent that determines if the input task is executable.
