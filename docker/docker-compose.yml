@@ -1,7 +1,7 @@
 version: '3.9'
 
 services:
-  notebook:
+  ctagi:
     container_name: createtoolagi
     image: jupyter/datascience-notebook
     #ports:
