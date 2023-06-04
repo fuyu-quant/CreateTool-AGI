@@ -60,7 +60,7 @@ class CTAGI():
                     tool_code = self.creator.run(input, search_result = search_result, created_tool_code = created_tool_code)
                     created_tool_code = tool_code
             
-                    self.executor.run_with_create_tool(input, search_result = search_result, tool_code = tool_code)
+                    self.executor.run_with_create_tool(input, tool_code = tool_code)
                     
                     self.searcher.save(tool_code = tool_code)
                     break
