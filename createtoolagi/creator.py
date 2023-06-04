@@ -30,6 +30,28 @@ class Creator():
         ・If you have previously created code that failed to execute, please refer to it as well.
         ・Here is the code I created previously: {created_tool_code_}
         
+        ・The following code was created with the input "multiply two numbers". Please create it like this code.
+        ------------------
+        from langchain.tools import BaseTool
+
+        class MultiplicationTool(BaseTool):
+            name = "MultiplicationTool"
+            description = "used for multiplication. The input is two numbers. For example, if you want to multiply 1 by 2, the input is '1,2'."
+
+            def _run(self, query: str) -> str:
+                "Use the tool."
+                a, b = query.split(",")
+                c = int(a) * int(b)
+                result = c
+
+            return result 
+
+            async def _arun(self, query: str) -> str:
+                "Use the tool asynchronously."
+                raise NotImplementedError("MultiplicationTool does not support async")     
+        ------------------
+
+        ・The following is a code that may be similar. Please refer to them if they exist.
         ------------------
         {related_tools_}
         """.format(
