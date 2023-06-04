@@ -2,7 +2,7 @@ from langchain.llms import OpenAI
 import re
 
 
-class Creater():
+class Creator():
     def __init__(
         self,
         model,
