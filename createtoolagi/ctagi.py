@@ -57,7 +57,7 @@ class CTAGI():
                 count += 1
                 print(f'Try:{count}')
                 try:
-                    tool_code = self.creater(input, search_result = search_result, created_tool_code = created_tool_code)
+                    tool_code = self.creator(input, search_result = search_result, created_tool_code = created_tool_code)
                     created_tool_code = tool_code
             
                     self.executor.run_with_create_tool(input, search_result = search_result, tool_code = tool_code)

@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='createtoolagi',
-    version='0.1.12',
+    version='0.1.13',
     packages=find_packages(),  # ここでパッケージ内のモジュールが自動的に見つけられます
     install_requires=[  # 依存関係リスト
         'langchain==0.0.167',
