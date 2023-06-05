@@ -44,7 +44,8 @@ class CTAGI():
 
 
     def run(self, input):
-        generalized_input = self.planner.run(input)
+        #generalized_input = self.planner.run(input)
+        generalized_input = input
 
         search_result = self.searcher.run(generalized_input)
 
