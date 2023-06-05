@@ -39,13 +39,15 @@ class Executor():
     def run_with_create_tool(self, input, tool_code):
         print("> Execute the task with the tool you created.")
 
-        tools = []
+        namespace = {"tools": []}
 
         tool_name = re.search(r'name = "(.*?)"', tool_code).group(1)
 
         tool_code = tool_code + '\n' + f'{tool_name} = {tool_name}()'
-        exec(tool_code, globals())
-        exec(f'tools.append({tool_name})', globals())
+        exec(tool_code, globals(), namespace)
+        exec(f'tools.append({tool_name})', globals(), namespace)
+
+        tools = namespace["tools"]
 
         agent = initialize_agent(
             tools, 
