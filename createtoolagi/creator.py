@@ -9,7 +9,7 @@ class Creator():
         ):
         self.create_model = create_model
 
-    def run(self, input, search_result, created_tool_code):
+    def run(self, generalized_input, search_result, created_tool_code):
         print("> Create a tool.")
 
         related_tools = ''
@@ -55,7 +55,7 @@ class Creator():
         ------------------
         {related_tools_}
         """.format(
-            input_ = input, 
+            input_ = generalized_input, 
             created_tool_code_ = created_tool_code, 
             related_tools_ = related_tools
             )

@@ -44,11 +44,11 @@ class CTAGI():
 
 
     def run(self, input):
-        input = self.planner.run(input)
+        generalized_input = self.planner.run(input)
 
-        search_result = self.searcher.run(input)
+        search_result = self.searcher.run(generalized_input)
 
-        decision = self.decider.run(input, search_result = search_result)
+        decision = self.decider.run(generalized_input, search_result = search_result)
 
         if decision == "Yes.":
             self.executor.run(input, search_result = search_result)
@@ -60,7 +60,7 @@ class CTAGI():
                 count += 1
                 print(f'Try:{count}')
                 try:
-                    tool_code = self.creator.run(input, search_result = search_result, created_tool_code = created_tool_code)
+                    tool_code = self.creator.run(generalized_input, search_result = search_result, created_tool_code = created_tool_code)
                     created_tool_code = tool_code
             
                     self.executor.run_with_create_tool(input, tool_code = tool_code)

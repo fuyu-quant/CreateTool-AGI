@@ -8,7 +8,7 @@ class Decider():
         ):
         self.base_model = base_model
 
-    def run(self, input, search_result):
+    def run(self, generalized_input, search_result):
         print("> Decide if the task is executable.")
         
         executable_tasks = ''
@@ -29,7 +29,7 @@ class Decider():
         -----------
         {executable_tasks_}
         
-        """.format(input_ = input, executable_tasks_ = executable_tasks)
+        """.format(input_ = generalized_input, executable_tasks_ = executable_tasks)
 
         responese = self.base_model(prompt)
 

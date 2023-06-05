@@ -15,10 +15,10 @@ class Searcher():
         self.embedding_model = embedding_model
         self.qdrant = qdrant
 
-    def run(self, input):
+    def run(self, generalized_input):
         print("> Search tools.")
 
-        query = f"Helpful tools to do '{input}'"
+        query = f"Helpful tools to do '{generalized_input}'"
 
         result = self.qdrant.search(
             collection_name="tool_store",
