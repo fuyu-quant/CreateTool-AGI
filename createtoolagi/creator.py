@@ -22,15 +22,17 @@ class Creator():
 
         create_prompt = """
         Please create your code in compliance with all of the following conditions.
-        ・Create a python class that can execute {input_} with a single string as input.
+        ・Create a python class that can take a single string as input and perform the following.
+        ------------------
+        {input_}
+        ------------------
+        ・Create code that can make predictions about new data based on logic from large amounts of input data without using machine learning models.
         ・Output should be code only.
         ・Do not enclose the output in ``python ``` or the like.
         ・from langchain.tools import BaseTool must be written.
         ・Class must inherit from BaseTool.
         ・If you have previously created code that failed to execute, please refer to it as well.
         ・Here is the code I created previously: {created_tool_code_}
-        ・Create code that can make predictions about new data based on logic from large amounts of input data without using machine learning models.
-        
         ・The following code was created with the input "multiply two numbers". Please create it like this code.
         ------------------
         from langchain.tools import BaseTool
@@ -51,7 +53,6 @@ class Creator():
                 "Use the tool asynchronously."
                 raise NotImplementedError("MultiplicationTool does not support async")     
         ------------------
-
         ・The following is a code that may be similar. Please refer to them if they exist.
         ------------------
         {related_tools_}
