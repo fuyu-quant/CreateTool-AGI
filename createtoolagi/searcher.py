@@ -40,9 +40,9 @@ class Searcher():
         tool_name = re.search(r'name = "(.*?)"', tool_code).group(1)
         description = re.search(r'description = "(.*?)"', tool_code).group(1)
         
-        payload = {'discription': discription, 'code': tool_code, 'tool_name': tool_name}
+        payload = {'description': description, 'code': tool_code, 'tool_name': tool_name}
         
-        embedding = self.embedding_model.embed_query(discription)
+        embedding = self.embedding_model.embed_query(description)
         
         # upload data
         self.qdrant.upload_records(

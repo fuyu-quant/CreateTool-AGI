@@ -14,16 +14,19 @@ class Executor():
     def run(self, input, search_result):
         print("> Execute the task.")
 
-        tools = []
+       
+        namespace = {"tools": []}
 
         for i in range(len(search_result)):
-            disc = search_result[i].payload['discription']
+            #desc = search_result[i].payload['description']
             code = search_result[i].payload['code']
             tool_name = search_result[i].payload['tool_name']
 
             tool_code = code + '\n' + f'{tool_name} = {tool_name}()'
-            exec(tool_code, globals())
-            exec(f'tools.append({tool_name})', globals())
+            exec(tool_code, globals(), namespace)
+            exec(f'tools.append({tool_name})', globals(), namespace)
+
+        tools = namespace["tools"]
 
         agent = initialize_agent(
             tools, 
