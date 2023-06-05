@@ -61,8 +61,8 @@ class CTAGI():
             created_tool_code = None
             while count < 10:
                 count += 1
-                print(f'Try:{count}')
                 try:
+                    print(f'Try:{count}')
                     tool_code = self.creator.run(training_data, search_result = search_result, created_tool_code = created_tool_code)
                     created_tool_code = tool_code
 
@@ -76,8 +76,7 @@ class CTAGI():
                     print('\033[32m' + f"Error occurred: {e}" + '\n' + '\033[0m')
                     traceback.print_exc()
                     
-            if count >= 5:
+            if count >= 10:
                 print('\033[32m' + "Reached the maximum number of tries." + '\033[0m')
-
-            
+       
         return 
