@@ -19,11 +19,12 @@ class Decider():
             executable_tasks += 'description:' + '\n' + desc +'\n' + 'code:' +'\n' + code + '\n' + '------------------' + '\n'
 
         prompt = """
-        You are the agent who determines whether the input task can be executed.
-        You execute tasks using the following tools. Please refer to the descriptions of the tools and the code to determine whether the task can be executed or not.
-        The task you are to perform is {input_}.
-        Answer "Yes." if you can perform the task, or "No." if you cannot.
-        Never output anything other than "Yes." and "No.".
+        Please answer the following questions in accordance with the following conditions.
+        ・Determine if the entered task is executable.
+        ・You execute tasks using the following tools. Please refer to the descriptions of the tools and the code to determine whether the task can be executed or not.
+        ・The task you are to perform is {input_}.
+        ・Answer "Yes." if you can perform the task, or "No." if you cannot.
+        ・Never output anything other than "Yes." and "No.".
 
         The following tools are available to you.
         -----------
