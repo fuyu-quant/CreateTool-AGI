@@ -29,6 +29,7 @@ class Creator():
         ・Class must inherit from BaseTool.
         ・If you have previously created code that failed to execute, please refer to it as well.
         ・Here is the code I created previously: {created_tool_code_}
+        ・Create code that can make predictions about new data based on logic from large amounts of input data without using machine learning models.
         
         ・The following code was created with the input "multiply two numbers". Please create it like this code.
         ------------------
