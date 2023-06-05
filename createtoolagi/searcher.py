@@ -2,6 +2,7 @@ from langchain.llms import OpenAI
 from langchain.embeddings.openai import OpenAIEmbeddings
 
 from qdrant_client import QdrantClient
+from qdrant_client import models
 
 import re
 
