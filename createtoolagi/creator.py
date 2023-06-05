@@ -46,8 +46,7 @@ class Creator():
                 a, b = query.split(",")
                 c = int(a) * int(b)
                 result = c
-
-            return result 
+                return result 
 
             async def _arun(self, query: str) -> str:
                 "Use the tool asynchronously."

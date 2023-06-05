@@ -72,6 +72,7 @@ class CTAGI():
                     
                     self.searcher.save(tool_code = tool_code)
                     break
+                
                 except Exception as e:
                     print('\033[32m' + f"Error occurred: {e}" + '\n' + '\033[0m')
                     traceback.print_exc()
