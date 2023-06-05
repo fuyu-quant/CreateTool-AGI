@@ -33,6 +33,8 @@ class Decider():
 
         responese = self.base_model(prompt)
 
+        print(f'Response：{responese}')
+
         if responese == "Yes.":
             print('\033[32m' + 'I do not need to create a tool to run it.\n' + '\033[0m')
 
