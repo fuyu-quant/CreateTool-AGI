@@ -64,6 +64,8 @@ class CTAGI():
                 try:
                     tool_code = self.creator.run(generalized_input, search_result = search_result, created_tool_code = created_tool_code)
                     created_tool_code = tool_code
+
+                    print(f"Created tool code: {tool_code}")
             
                     self.executor.run_with_create_tool(input, tool_code = tool_code)
                     
