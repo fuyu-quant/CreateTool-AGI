@@ -21,10 +21,11 @@ class Decider():
         prompt = """
         Please answer the following questions in accordance with the following conditions.
         ・Determine if the entered task is executable.
-        ・You execute tasks using the following tools. Please refer to the descriptions of the tools and the code to determine whether the task can be executed or not.
-        ・The task you are to perform is {input_}.
         ・Answer "Yes." if you can perform the task, or "No." if you cannot.
         ・Never output anything other than "Yes." and "No.".
+        ・You execute tasks using the following tools. Please refer to the descriptions of the tools and the code to determine whether the task can be executed or not.
+        ・The task you are to perform is {input_}.
+
 
         The following tools are available to you.
         -----------
