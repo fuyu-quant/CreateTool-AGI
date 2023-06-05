@@ -26,7 +26,6 @@ class Creator():
         ------------------
         {input_}
         ------------------
-        ・Create code that can make predictions about new data based on logic from large amounts of input data without using machine learning models.
         ・Output should be code only.
         ・Do not enclose the output in ``python ``` or the like.
         ・from langchain.tools import BaseTool must be written.
