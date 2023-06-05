@@ -13,7 +13,6 @@ class Executor():
 
     def run(self, input, search_result):
         print("> Execute the task.")
-
        
         namespace = {"tools": []}
 
@@ -27,6 +26,8 @@ class Executor():
             exec(f'tools.append({tool_name})', globals(), namespace)
 
         tools = namespace["tools"]
+
+        print(f'Tools：{tools}')
 
         agent = initialize_agent(
             tools, 
