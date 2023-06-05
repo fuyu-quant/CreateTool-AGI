@@ -11,6 +11,9 @@ from .searcher import Searcher
 from .planner import Planner
 
 
+import traceback
+
+
 class CTAGI():
     def __init__(
         self,
@@ -66,6 +69,7 @@ class CTAGI():
                     break
                 except Exception as e:
                     print('\033[32m' + f"Error occurred: {e}" + '\n' + '\033[0m')
+                    traceback.print_exc()
                     
             if count >= 5:
                 print('\033[32m' + "Reached the maximum number of tries." + '\033[0m')
