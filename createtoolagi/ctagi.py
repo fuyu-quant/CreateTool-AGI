@@ -20,6 +20,7 @@ class CTAGI():
         base_model_name,
         create_model_name,
         embegging_model_name,
+        qdrant,
         ):
         self.base_model_name = base_model_name
         self.base_model = OpenAI(temperature=0, model_name = self.base_model_name)
@@ -32,8 +33,9 @@ class CTAGI():
 
         self.input = input
 
-        self.qdrant = QdrantClient(path='./tools')
-        self.qdrant.create_collection(collection_name ="tool_store", vectors_config=models.VectorParams(size=1536, distance=models.Distance.COSINE))
+        self.qdrant = qdrant
+        #self.qdrant = QdrantClient(path='./tools')
+        #self.qdrant.create_collection(collection_name ="tool_store", vectors_config=models.VectorParams(size=1536, distance=models.Distance.COSINE))
 
         self.planner = Planner(base_model = self.base_model)
         self.searcher = Searcher(embedding_model = self.embegging_model, qdrant = self.qdrant)
@@ -54,11 +56,11 @@ class CTAGI():
         if decision == "Yes.":
             self.executor.run(input, search_result = search_result)
 
-        else:
-        #elif decision == "No.":
+        #else:
+        elif decision == "No.":
             count = 0
             created_tool_code = None
-            while count < 5:
+            while count < 10:
                 count += 1
                 print(f'Try:{count}')
                 try:

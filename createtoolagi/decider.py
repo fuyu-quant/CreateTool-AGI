@@ -40,7 +40,8 @@ class Decider():
         if responese == "Yes.":
             print('\033[32m' + 'I do not need to create a tool to run it.\n' + '\033[0m')
 
-        else:
+        #else:
+        elif responese == "No.":
             print('\033[32m' + 'I must create the tool before executing.\n' + '\033[0m')
 
 
