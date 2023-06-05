@@ -22,7 +22,7 @@ class Decider():
         Please answer the following questions in accordance with the following conditions.
         ・Determine if the entered task is executable.
         ・Answer "Yes." if you can perform the task, or "No." if you cannot.
-        ・Never output anything other than "Yes." and "No.".
+        ・Please make sure to answer with "Yes." or "No.". Otherwise, do not include them in the output.
         ・You execute tasks using the following tools. Please refer to the descriptions of the tools and the code to determine whether the task can be executed or not.
         ・The task you are to perform is {input_}.
 
