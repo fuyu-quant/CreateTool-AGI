@@ -53,7 +53,7 @@ class CTAGI():
         decision = self.decider.run(validation_data, search_result = search_result)
 
         if decision == "Yes.":
-            self.executor.run(input, search_result = search_result)
+            self.executor.run(validation_data, search_result = search_result)
 
         #else:
         elif decision == "No.":
@@ -72,7 +72,7 @@ class CTAGI():
                     
                     self.searcher.save(tool_code = tool_code)
                     break
-                
+
                 except Exception as e:
                     print('\033[32m' + f"Error occurred: {e}" + '\n' + '\033[0m')
                     traceback.print_exc()
