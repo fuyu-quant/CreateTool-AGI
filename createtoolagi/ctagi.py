@@ -53,7 +53,8 @@ class CTAGI():
         if decision == "Yes.":
             self.executor.run(input, search_result = search_result)
 
-        elif decision == "No.":
+        else:
+        #elif decision == "No.":
             count = 0
             created_tool_code = None
             while count < 5:
